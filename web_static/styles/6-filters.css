@@ -1,0 +1,85 @@
+B/* properties for the tag selection*/
+.container .filters     {
+    background: #FFF;
+    border:1px solid #DDD; /*border solid with color*/
+    border-radius:4px; /*corner rounded*/
+    height:70px;
+    width: 100%;
+    display: flex; /*Displays an element as a block-level flex container*/
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center; /*aling the elements vertical*/
+}
+
+/* properties from button search*/
+.filters button     {
+    font-size:18px;
+    background: #FF5A5F;
+    color:#FFF;
+    height:48px;
+    width:20%;
+    border:none; /*without borders*/
+    border-radius: 4px; /* corner rounded*/
+    margin-right: 30px;
+    margin-left: auto;
+}
+
+/*when moues is over the button change the opacity*/
+.filters button:hover   {
+    opacity:0.9;
+}
+
+.locations, .amenities  {
+    height: 100%;
+    width: 25%;
+    z-index: 1;
+}
+
+/*only boerder right at the first element*/
+.locations  {
+    border-right: 1px solid #DDD;
+}
+
+/*size of the elements fo the divs eith h3*/
+.amenities h3, .locations h3 {
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-indent: 45px;
+}
+
+/*size of the elements fo the divs eith h4*/
+.amenities h4, .locations h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 1px;
+    text-overflow: ellipsis; /*cover if the text is too long*/
+    text-indent: 45px;
+}
+.amenities h2, .locations h2 {
+    font-size: 16px;
+    line-height: 0.3;
+}
+/* information of section before hover*/
+section.filters .popover    {
+    display: none;
+    background-color: #FAFAFA;
+    max-width: 100%;
+    margin-top: -4px; /*to match with the border div*/
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-overflow: ellipsis; /*cover if the text is too long*/
+}
+
+/* display the information when mouse is over*/
+.locations:hover .popover,
+.amenities:hover .popover {
+    display: block;
+}
+
+/* block the type of list "º" */
+.popover li {
+    list-style: none;
+    line-height: 2;
+}
